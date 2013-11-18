@@ -88,3 +88,26 @@ def BinarySearch(MyList,Target):
             return mid
     return "Number Not Found"
 #print BinarySearch(MyList,Target)
+
+
+
+#Brittany Miller's binary search
+search_list = [23, 43, 45, 56, 67, 78,89,90]
+list_element = 56
+
+def bsearch(search_list, list_element):
+    size=len(search_list)-1
+    middle_point = size/2
+    list_len=len(search_list)
+    while size>0:
+            if list_element == search_list[middle_point]:
+                return middle_point
+            elif list_element < search_list[middle_point]:
+                middle_point = middle_point/2
+                size-=1
+            elif list_element < search_list[middle_point]:
+                middle_point =(middle_point + list_len)/2
+                size-=1
+    return -1
+
+
